@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#e6e8ea",
+                    "surface-variant": "#dadddf",
+                    "surface-bright": "#f5f6f7",
+                    "on-tertiary-fixed-variant": "#70103b",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary-fixed-variant": "#67389d",
+                    "primary-dim": "#5d00e3",
+                    "secondary": "#7343a9",
+                    "secondary-fixed-dim": "#d8b5ff",
+                    "secondary-container": "#e3c6ff",
+                    "tertiary": "#9d365d",
+                    "on-primary-container": "#2a0070",
+                    "inverse-on-surface": "#9b9d9e",
+                    "on-primary": "#f7f0ff",
+                    "surface-dim": "#d1d5d7",
+                    "surface-container-low": "#eff1f2",
+                    "on-error-container": "#510017",
+                    "primary": "#6a1cf6",
+                    "on-secondary-fixed": "#49147f",
+                    "on-surface": "#2c2f30",
+                    "error": "#b41340",
+                    "on-tertiary-container": "#640332",
+                    "tertiary-fixed-dim": "#f57ca5",
+                    "inverse-primary": "#9d79ff",
+                    "error-dim": "#a70138",
+                    "secondary-fixed": "#e3c6ff",
+                    "tertiary-fixed": "#ff8db2",
+                    "primary-container": "#ac8eff",
+                    "on-surface-variant": "#595c5d",
+                    "primary-fixed": "#ac8eff",
+                    "outline-variant": "#abadae",
+                    "on-secondary": "#faefff",
+                    "on-secondary-container": "#5e2d93",
+                    "on-background": "#2c2f30",
+                    "tertiary-dim": "#8d2951",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-dim": "#66369c",
+                    "outline": "#757778",
+                    "background": "#f5f6f7",
+                    "on-primary-fixed-variant": "#350088",
+                    "error-container": "#f74b6d",
+                    "primary-fixed-dim": "#a07dff",
+                    "surface": "#f5f6f7",
+                    "on-tertiary-fixed": "#380019",
+                    "surface-tint": "#6a1cf6",
+                    "inverse-surface": "#0c0f10",
+                    "surface-container-highest": "#dadddf",
+                    "surface-container-high": "#e0e3e4",
+                    "tertiary-container": "#ff8db2",
+                    "on-tertiary": "#ffeff1",
+                    "on-error": "#ffefef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl tonal-shift bg-slate-50/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.04)]">
+<nav class="flex items-center justify-between px-8 h-16 w-full">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black text-[#6a1cf6] tracking-tighter font-headline">Volo</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 font-medium font-headline tracking-tight hover:text-[#6a1cf6] transition-colors duration-200" href="#">Projects</a>
+<a class="text-slate-600 font-medium font-headline tracking-tight hover:text-[#6a1cf6] transition-colors duration-200" href="#">Community</a>
+<a class="text-slate-600 font-medium font-headline tracking-tight hover:text-[#6a1cf6] transition-colors duration-200" href="#">Team</a>
+<a class="text-[#6a1cf6] border-b-2 border-[#6a1cf6] pb-1 font-headline tracking-tight" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-slate-500">
+<span class="material-symbols-outlined cursor-pointer hover:text-[#6a1cf6] transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#6a1cf6] transition-colors">settings</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 active:scale-95 transition-all">Create New</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto space-y-32">
+<section class="relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 space-y-8">
+<h1 class="text-7xl font-extrabold font-headline tracking-tighter text-on-surface leading-[1.1]">
+                        Built for the <br/>
+<span class="text-primary italic">Agile Curator.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        Volo is not just a tool; it's a movement towards effortless creation. We believe in speed, nimbleness, and the ethereal quality of a mind in flight.
+                    </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 group">
+                            Start Exploring
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="w-full aspect-square rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D render of iridescent fluid shapes floating in a minimalist white space with soft violet studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNvgB5IxkcwhSAF_g5ks46pwPj93ZbIa8AWEF-XIYo4plSupMB6g2UKfNkjAxDJu8zEPv-T7-gLilQFq5qlBQnrfuGN1-i7dGtAGQ4bySP7RrzuTEQauLD0cyRVDP-ecH2DSdUK_8oHd751bbD7dPi6_4sWtVwb0Q3N_HZaDhsddtByZ5OLE5-l5J4Gkg6KO_qFuarPDWNM-Hyt1ScwLyfLB6LVA-S_0ziD1oW37QHeCPIZw_wrGcoaTXHMT0kK1qZn2b5_dV0_WoK"/>
+</div>
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-container/30 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-secondary-container/20 blur-[80px] rounded-full"></div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-surface-container-low rounded-[2rem] p-12 flex flex-col justify-between min-h-[400px] relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-3xl font-bold font-headline mb-4">The Philosophy of Flight</h3>
+<p class="text-on-surface-variant max-w-sm">Every interaction in Volo is designed to feel weightless. We remove the friction between thought and execution.</p>
+</div>
+<div class="mt-auto relative z-10">
+<span class="text-6xl font-black text-primary/10 font-headline uppercase tracking-tighter">Velocity</span>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-20" data-alt="Ethereal photograph of light trails and lens flares against a deep space background, signifying speed and data transfer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCd8pqpGPB3DQK50dPANpyj356mPfJT4YmFBwGlMLv1aeMPq7LX_Zriig-7AnSatwbooAL1aLjBY47xIPoikiJvJu6nMH4qVnqr5stOAYLFWiM1tglJO6ttqtVsDD_s6CY7EpBDa2sQ4gkn6beSnk1SvlHG0BonV70lLtPDGPBlm50MXw7b18VqpsGtOlx5wyGb_VyBw-_tQB1shSSf-fdelB0QnEGOC1jIyvmTfZTEdzhblah_CKKBJ5ZB_9Bjry3_FAinyWfKcUi"/>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 border border-outline-variant/15 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary-fixed-dim rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<h4 class="text-xl font-bold font-headline">Unrivaled Speed</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Latency is the enemy of creativity. Volo responds at the speed of intuition.</p>
+</div>
+<div class="bg-primary text-on-primary rounded-[2rem] p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">airplanemode_active</span>
+<h4 class="text-xl font-bold font-headline">Fly Higher</h4>
+</div>
+<p class="text-sm text-on-primary/80 leading-relaxed">Elevate your workflow above the noise of traditional management tools.</p>
+</div>
+</section>
+<section class="bg-surface-container-low rounded-[3rem] p-16 relative overflow-hidden">
+<div class="max-w-3xl mx-auto text-center space-y-8 relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-xs font-bold tracking-widest uppercase text-primary shadow-sm">
+                    Manifesto
+                </div>
+<h2 class="text-5xl font-extrabold font-headline tracking-tight text-on-surface">The Agile Curator</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed">
+                    Modern work is no longer about linear production; it is about curation. The Agile Curator navigates vast oceans of information, selecting only the finest threads to weave into their vision. Volo provides the vessel for this journey.
+                </p>
+<div class="pt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-2">
+<div class="text-4xl font-black text-primary font-headline">99%</div>
+<div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Frictionless Flow</div>
+</div>
+<div class="space-y-2">
+<div class="text-4xl font-black text-primary font-headline">0.2s</div>
+<div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Global Sync</div>
+</div>
+<div class="space-y-2">
+<div class="text-4xl font-black text-primary font-headline">∞</div>
+<div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Creative Scope</div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="order-2 md:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Modern collaborative workspace with glass walls, minimalist furniture, and lush plants in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkBwY2oglDO0tcCUujtx5ZxCsDRZo6yHPrsIodvjGd_urqnPAV4ZT6uPvdkVOCeMuOinOn9dzgHl5642S93x9-_OQ2n0-Tcm08sj4A7YQ9g1e6FII0YtvNj6IYLmQWRo3XqOFZ_GR1Sh1DhLPPeQ51pjU8VGThM3Pn4Qz8pSrwcn7pIRtSfZrw_IrhuLfhI1sUpEBFgRw5Nq63vp2Mr6wSu59SLpNWUsH1W4GxsW8j70-SkTGc0zc0vmD97GJ3pqv6Q9jotLGC8Sud"/>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Young professional designers working together on a high-end digital interface mockup in a sunlit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeRBMpI6mUwoZiiq41ePFzcYFw5Z2mqgI7ubb2xc2uDGfl0ubHEZba2e04KFunrm1be3aibpoQbQR9UhMeOvEotqexE0VCuXQ9DTdTVteaBBRSW5P8LFHJ4qibmjhd88uvvbzXgpbssPdWJyD8t7uS-cs44oNWdyE4mrQT7hCvhoeeniAANwiKZ_4tJwkh4nRuNQibYa1udm38hTfrk_PWOgLLVkhHaxRThoii4l21X-xRpzq5qd9xyd7-XHtY7Dq6TiS6YN_auAHZ"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Top-down view of a designer's desk with a clean laptop, coffee cup, and sketches on white paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuPMsdzXXWzxHRh5oPJBCw5JNElyGo7CWGNZ7o07XV8436vP1q5Jy3fftQfc_qkyTVjoEmCn1XBwK2hrjsvwgiZXA3XB40hWjErpCagsdtUefhuctwqE8F-bBCLu8nIqVa8NQUGakaVEMNOUr1t664T0GHQTf17ZY6j5O5Or_t8U8GiWJ8JUgD1G1oJHgbwTdooW4klj_e8v_0qtJSSoc1nS1buGnGaNk6EgbK0Q6IvYfb9eYzOyKpnYxAH4gPMTrN4RkMhZcUce-R"/>
+</div>
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Abstract architectural shot showing clean white lines, glass reflections, and a sense of soaring height" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEIDGUHXb58YcpYffT10TdfjJsuxK-ynC3rd6Baq1eq3152yw4sq8F0SW3dXq2jCztapVDUDHjG7fJn2J7mloCg43IngZFoYPtP0UpYl3VNGgaGYCXd3BOmqr54MgpDtEfntKE1FcElBai0e2zXzpD82b8MCk98gJJtoEALnXB3qhSF6-n5JA9DdR9mXP7lO42ZJIWtybIYY1R-Zo-4U3hgTlXbWKQv-V6cXvfJZbbN6DasIk1fsfBRj4IUze-XvPZPu6jfv4FoQj7"/>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<h2 class="text-5xl font-extrabold font-headline tracking-tighter">Our Core Values</h2>
+<div class="space-y-6">
+<div class="group">
+<div class="flex items-center gap-4 mb-2">
+<span class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold">01</span>
+<h3 class="text-xl font-bold font-headline">Radical Simplicity</h3>
+</div>
+<p class="text-on-surface-variant ml-14 leading-relaxed group-hover:text-on-surface transition-colors">We strip away the non-essential to reveal the brilliance within. If it doesn't add value, it doesn't belong.</p>
+</div>
+<div class="group">
+<div class="flex items-center gap-4 mb-2">
+<span class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold">02</span>
+<h3 class="text-xl font-bold font-headline">Kinetic Energy</h3>
+</div>
+<p class="text-on-surface-variant ml-14 leading-relaxed group-hover:text-on-surface transition-colors">Everything we build is designed for movement. Static is a state of mind we choose to ignore.</p>
+</div>
+<div class="group">
+<div class="flex items-center gap-4 mb-2">
+<span class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold">03</span>
+<h3 class="text-xl font-bold font-headline">Editorial Precision</h3>
+</div>
+<p class="text-on-surface-variant ml-14 leading-relaxed group-hover:text-on-surface transition-colors">Precision is not about rigidity; it's about making deliberate choices that lead to spectacular outcomes.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="glass-panel rounded-[3rem] p-20 text-center space-y-8 border border-white/40 shadow-2xl relative overflow-hidden">
+<h2 class="text-5xl font-black font-headline tracking-tight max-w-2xl mx-auto">Ready to take flight?</h2>
+<p class="text-on-surface-variant text-lg">Join the thousands of curators who have found their wings with Volo.</p>
+<div class="flex justify-center gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform">Create Workspace</button>
+<button class="bg-surface-container-high text-on-surface px-10 py-4 rounded-xl font-bold hover:bg-surface-container-highest transition-colors">View Demo</button>
+</div>
+<div class="absolute -z-10 top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5"></div>
+</section>
+</main>
+<footer class="bg-[#f5f6f7] dark:bg-slate-950 py-12 px-8 border-t border-outline-variant/15">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-sm font-bold text-slate-900 font-headline tracking-tighter">Volo Design</span>
+<p class="font-['Inter'] text-xs text-slate-400">© 2024 Volo Design. Built for the agile curator.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs text-slate-500 hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">Privacy</a>
+<a class="text-xs text-slate-500 hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">Terms</a>
+<a class="text-xs text-slate-500 hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">API</a>
+<a class="text-xs text-slate-500 hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>

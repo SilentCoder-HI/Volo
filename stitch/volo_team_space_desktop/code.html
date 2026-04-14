@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volo Team Space</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#e6e8ea",
+                        "surface-variant": "#dadddf",
+                        "surface-bright": "#f5f6f7",
+                        "on-tertiary-fixed-variant": "#70103b",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary-fixed-variant": "#67389d",
+                        "primary-dim": "#5d00e3",
+                        "secondary": "#7343a9",
+                        "secondary-fixed-dim": "#d8b5ff",
+                        "secondary-container": "#e3c6ff",
+                        "tertiary": "#9d365d",
+                        "on-primary-container": "#2a0070",
+                        "inverse-on-surface": "#9b9d9e",
+                        "on-primary": "#f7f0ff",
+                        "surface-dim": "#d1d5d7",
+                        "surface-container-low": "#eff1f2",
+                        "on-error-container": "#510017",
+                        "primary": "#6a1cf6",
+                        "on-secondary-fixed": "#49147f",
+                        "on-surface": "#2c2f30",
+                        "error": "#b41340",
+                        "on-tertiary-container": "#640332",
+                        "tertiary-fixed-dim": "#f57ca5",
+                        "inverse-primary": "#9d79ff",
+                        "error-dim": "#a70138",
+                        "secondary-fixed": "#e3c6ff",
+                        "tertiary-fixed": "#ff8db2",
+                        "primary-container": "#ac8eff",
+                        "on-surface-variant": "#595c5d",
+                        "primary-fixed": "#ac8eff",
+                        "outline-variant": "#abadae",
+                        "on-secondary": "#faefff",
+                        "on-secondary-container": "#5e2d93",
+                        "on-background": "#2c2f30",
+                        "tertiary-dim": "#8d2951",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-dim": "#66369c",
+                        "outline": "#757778",
+                        "background": "#f5f6f7",
+                        "on-primary-fixed-variant": "#350088",
+                        "error-container": "#f74b6d",
+                        "primary-fixed-dim": "#a07dff",
+                        "surface": "#f5f6f7",
+                        "on-tertiary-fixed": "#380019",
+                        "surface-tint": "#6a1cf6",
+                        "inverse-surface": "#0c0f10",
+                        "surface-container-highest": "#dadddf",
+                        "surface-container-high": "#e0e3e4",
+                        "tertiary-container": "#ff8db2",
+                        "on-tertiary": "#ffeff1",
+                        "on-error": "#ffefef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.04)] flex items-center justify-between px-8 h-16 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#6a1cf6] tracking-tighter font-headline">Volo</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-slate-600 font-medium hover:text-[#6a1cf6] transition-colors duration-200 font-headline" href="#">Projects</a>
+<a class="text-slate-600 font-medium hover:text-[#6a1cf6] transition-colors duration-200 font-headline" href="#">Community</a>
+<a class="text-[#6a1cf6] border-b-2 border-[#6a1cf6] pb-1 font-bold tracking-tight font-headline" href="#">Team</a>
+<a class="text-slate-600 font-medium hover:text-[#6a1cf6] transition-colors duration-200 font-headline" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-semibold text-sm hover:opacity-90 transition-all scale-95 duration-150">Create New</button>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">settings</span>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container ml-2">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional headshot of a creative director smiling soft studio lighting minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAazrJ0dr_lyB_qt-Ztd2nuzbTmo7qKz3-dvshdv9aWqd_EVrR7wWds6tQLK37X2SvqUGBQS54OOqGTHPzLE1K06OUBLhHEiWWJV3jiVRXz8wN1qWIWx8LNa17spj1RNRyDdTO03zYhxP4zhmnka2_0ITNCLR19IXcuJ0L6CILAamdehABd1TIkpux7LEucIHYiE45flxKSHOETbQl1TlR1n4sQSC-1e0st6KspG3IR_frC6PNuwOuhGhaVPeMuMsbMu9U8p-1RX00b"/>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col p-4 gap-2 rounded-2xl m-4 h-[calc(100vh-80px)] w-64 bg-[#eff1f2] sticky top-20">
+<div class="flex items-center gap-3 p-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold">V</div>
+<div>
+<h3 class="font-['Inter'] text-sm font-semibold text-on-surface">Main Workspace</h3>
+<p class="text-xs text-on-surface-variant">Design Team</p>
+</div>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-white/50 rounded-xl transition-all active:translate-x-1 font-['Inter'] text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">grid_view</span> Workspace
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-white/50 rounded-xl transition-all active:translate-x-1 font-['Inter'] text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">folder</span> Projects
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-white/50 rounded-xl transition-all active:translate-x-1 font-['Inter'] text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">public</span> Community
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-[#6a1cf6] shadow-sm rounded-xl transition-all active:translate-x-1 font-['Inter'] text-sm font-semibold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span> Team
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-white/50 rounded-xl transition-all active:translate-x-1 font-['Inter'] text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+                </a>
+</nav>
+<div class="mt-auto p-4 bg-primary-container/20 rounded-2xl">
+<p class="text-xs font-bold text-on-primary-container mb-2">Upgrade Plan</p>
+<p class="text-[10px] text-on-primary-container/70 mb-3 leading-relaxed">Get unlimited team spaces and advanced analytics.</p>
+<button class="w-full bg-[#6a1cf6] text-white py-2 rounded-lg text-xs font-bold">Upgrade Now</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-4 lg:p-8 overflow-y-auto">
+<header class="mb-8 flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-black text-on-surface tracking-tighter font-headline mb-2">Team Space</h1>
+<p class="text-on-surface-variant font-medium">Manage your collective intelligence and workflow permissions.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-highest rounded-xl text-sm font-bold text-on-surface transition-all hover:bg-surface-variant">
+<span class="material-symbols-outlined text-sm">download</span> Export
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-xl text-sm font-bold shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]">
+<span class="material-symbols-outlined text-sm">person_add</span> Invite Member
+                    </button>
+</div>
+</header>
+<!-- Bento Grid -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Team Stats Row -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-3 gap-4 h-fit">
+<div class="col-span-1 bg-surface-container-lowest p-6 rounded-[24px] shadow-sm flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+<div>
+<p class="text-3xl font-black font-headline">24</p>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Active Members</p>
+</div>
+</div>
+<div class="col-span-1 bg-surface-container-lowest p-6 rounded-[24px] shadow-sm flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-secondary text-3xl">task_alt</span>
+<div>
+<p class="text-3xl font-black font-headline">142</p>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Tasks Closed</p>
+</div>
+</div>
+<div class="col-span-1 bg-surface-container-lowest p-6 rounded-[24px] shadow-sm flex flex-col justify-between h-40">
+<span class="material-symbols-outlined text-tertiary text-3xl">bolt</span>
+<div>
+<p class="text-3xl font-black font-headline">98%</p>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Productivity</p>
+</div>
+</div>
+</div>
+<!-- Recent Activity Timeline -->
+<div class="col-span-12 lg:col-span-4 row-span-2 bg-surface-container-low rounded-[24px] p-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-black font-headline tracking-tight">Recent Activity</h2>
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4 relative">
+<div class="w-0.5 bg-outline-variant/30 absolute left-4 top-10 bottom-[-16px]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-highest shrink-0 z-10 overflow-hidden">
+<img alt="Activity user" class="w-full h-full object-cover" data-alt="face of a young designer woman modern clean background soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCtq593A7WMtbEGjGHujvkeNCIhIfNyd1lqRR51R6kFgWDeRY5ltvPDeFC-OXbxuXrv39j1XNDK87uUdEu7rPPU_oaCJAKIxEPYpSP317Nh6vAUmP5AnZE5V-Nn5H-Dte-kEXGXahfffKxfzccWPuAHGxnD2sN0tvwBEF0rWdpAyiDTXMS98RsxClDYqKdbOsxv2zXDAv5wtDgqRxZOEGgxI-_a-npu2q-Met4tYeX3Z6eCIWUZcAYxQk6ikgfNdyv3jV8np8S49YN"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Sarah M. updated <span class="text-primary">Hero Component</span></p>
+<p class="text-[10px] text-on-surface-variant mt-1">2 minutes ago</p>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="w-0.5 bg-outline-variant/30 absolute left-4 top-10 bottom-[-16px]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-highest shrink-0 z-10 overflow-hidden">
+<img alt="Activity user" class="w-full h-full object-cover" data-alt="portrait of a creative man glasses smiling warm ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPDYJvSkUNu7BTCTJazbXiXkmIN5Eii2_SKHfZJwmjjwyWsVmEPvEieZYT0GQHiiKbdD3or4KWmaKGPICI9J3UoJYKUamDZmU1l4NOEEatfr_Py-nTpk6I754Nwqq7u5xu_rEy6UiIswzYcaU5q41eLbe4YYONt_wgdrmVKfQGEJGDq3bR2iWVZO0jd-aoW6-rBUcbDHzp8-mXxW6zkgWJgR1ytp79ugmxBsLgEAg0CDrvyObVt5113_nX701kPySFbnKlaDzfSRZZ"/>
+</div>
+<div>
+<p class="text-sm font-semibold">David K. joined <span class="text-primary">Marketing Sync</span></p>
+<p class="text-[10px] text-on-surface-variant mt-1">14 minutes ago</p>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="w-0.5 bg-outline-variant/30 absolute left-4 top-10 bottom-[-16px]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-highest shrink-0 z-10 overflow-hidden">
+<img alt="Activity user" class="w-full h-full object-cover" data-alt="headshot of a young product manager neutral expression professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBQh02l4yeT7OsWKKDW1vhEnUL5oDNaXt4mwSM02XBviiotHBnuyW1BVZWHhfnQkGogd4GKWoZQNDc7RXChCkV_Ri6RpZ5Q7fdcJNkh5_52urXs24CdH7D9ETOjZtNvLgNE3jtaVBK06tkItDrL674T5HYoCfg0y432ulU0vts3ylUFDCSbmVpLpOeJDqcKTlAmZFhCNzv1b7UF0AaC4PFI41O1dbw0nM4H7jpdDf6_RpIS8oM__5PWs9qdzvvhYZ_1NWa6qDBVq7p"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Elena R. uploaded <span class="text-primary">Brand_Guidelines.pdf</span></p>
+<p class="text-[10px] text-on-surface-variant mt-1">1 hour ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-highest shrink-0 z-10 overflow-hidden">
+<img alt="Activity user" class="w-full h-full object-cover" data-alt="minimalist avatar of a ux designer clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABI3RicSGvOd_GcTchcBMmpTW0IxRUoeoxsU_89daNLehkYqCedzc74MaNWJfrQH70SW9U5gpa-CKJfHSL1dKnCopsALKJT4ElelANpHSizMG3xHuyxmOlsPTpdJSJUNuWdKx9kXE6HA2zuItRxFrtKrtHRbi-_pdvXfs98IaZ6eB4HBCDILr17OWoLtR7MLA0qgG0ywyjC3tIQqme8ED1a6pyaJlEcsOEaCl1P5jpmjZ8BSknPvusTANI_jMbJLrTNsleAec9XgRI"/>
+</div>
+<div>
+<p class="text-sm font-semibold">Marc V. commented on <span class="text-primary">Dashboard V2</span></p>
+<p class="text-[10px] text-on-surface-variant mt-1">3 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Members Section -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-[24px] p-8 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-xl font-black font-headline">Active Members</h2>
+<p class="text-sm text-on-surface-variant font-medium">Currently online and collaborating</p>
+</div>
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-4 ring-white" data-alt="diverse team member 1 professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg-yzvYoD1bsFc225L5d2utbVmhPKWHutUP6dOGtxmMEaryapy6Z68kLM_WH-ctv9A0MAjUOrLqAxe4V40yGWxRrXjBPaLcX2gyPQSJ7HkQt3f0x1DvFGUnVr6earEiRIJ9eIr-9iwvLuSvWRqDaq80VAtjpt698eFemX1INy-kR4fEtP6VkiFOlGDkp0CDg-kxrUMJ8iAza38OE5w7MwaIyqOvjTjFL8Rp0T8eekYwsY9cj0mf9c2FEQ_ivbMVutLtqB4MafXZPNV"/>
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-4 ring-white" data-alt="diverse team member 2 professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbj-IlXDxXGzlRcgokN1kBAYFsNu1im_GUAC_KWnnhCpg0GSUsGIJPMbDYwUn3fvv39RT2YPzuPlCvuMTaol1Xx6SfRgVXDAngW1ntjuGiMdi3tCtrLKpWidTIi7bEA75ZgE2F-RA3RlDkGQKUSeXQYxsnN3khRsFwLprkDDX0LO7mU3Fc8fZ2CtbQHaV_O4Fr1DRHN78ogpK-BKnERK5CLX0FpXi32LUngUGCDdjETRNKh4RFZ-f6Y8AYxaB0oNYoqS3XRmGq6SCK"/>
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-4 ring-white" data-alt="diverse team member 3 professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwG-WHQp8lcO6EndZTMHAwNbCYPtudEwoiZQSdVMZBPUU8VB33suaYbXbhcpvgU1JuS4HAoQI1ugyypFh9ypmTW6F1itTPkjuIuyxjXraiIXchxmp3JsieJmh9aNZ34qS6qSvT5h-V3foL3GIlLMr6vZ5Gf7IlpQ89N5b3WELMdtabhsrDzpJMVFS5Lu8EU3CZDInz_vIBUOpfEyjPTkzpNfdn2YVnyUn2bVFpplm5WyBit0ekmqgj-7IwoP5EDwKsYqoEw_KmE7ZD"/>
+<div class="flex items-center justify-center h-10 w-10 rounded-full ring-4 ring-white bg-surface-container text-xs font-bold">+12</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low/50 rounded-2xl group hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Sarah Miller" class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of sarah miller smiling bright studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB68w7PMhDEP97riEb3oMSAKmMnwlk79h-_rT5INePko9YzS2YLt7_Aq7Qo-bEePVEcKjmhGFVpTqAjueBLfHLFMuZfp5QIVyAiwE7tbncDcZPeKD7INCwVvcCuHL4HP87a_RPtLz2Pc-HxzFQZzmOQOfz6uLK-fOiw2TL8b5begU62przBoPqxD8D4yw0BvdGDYeQidkYamR2mOrcJEvGoZnU84rYbW1GqUgvHUpZ-ZxMCVLByJkAV652P5dRRsX13osFd8_xBGKg"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Sarah Miller</h4>
+<p class="text-xs text-on-surface-variant">Lead Designer</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="px-3 py-1 bg-primary-container text-on-primary-container text-[10px] font-black rounded-full uppercase tracking-widest">Admin</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer group-hover:text-on-surface">more_vert</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-2xl group hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Marcus Chen" class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of marcus chen tech professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsTmT7S-RCKMwgghJ8orEUjavAw5NshD889-0PNbBJSQZn1LLWCCNVzlHgGtcUhYqcVy_vw3TZTyncB47yD5V-jA2tsY2S0_4fqX9Q1__VLXHYqFVSfZwghJ12hWBT4lo-pfjcgGu3laTkGytd25kMhFch14eU6kH0tu7JrdG-ZWhZf4pCLvQVNL-5GVYmNm5ny_tWhnUVQ_TYeRme0xlpCHI6GV4LifMafY_fnq403laboww58ItpSBAlBc5rs8paF7CWQxpKP70O"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Chen</h4>
+<p class="text-xs text-on-surface-variant">Senior Developer</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="px-3 py-1 bg-surface-container-highest text-on-surface text-[10px] font-black rounded-full uppercase tracking-widest">Editor</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer group-hover:text-on-surface">more_vert</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-2xl group hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Julia Ross" class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of julia ross creative professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaofib21Eq3r7SfM_4-loqdctoqJtZbGMfJXMtbcIo__A9hSipRd0TTSRAbQg5mlWZg8iLI8W9sPGDMpIDIRkaGRHRJ7qDYHyMJ9QWiHEBPLj7NJmNzEbudBRqb6Oz_VWTsAp4DkZrPhhzZRkLLdAzYt6HowPX6N8hkVK9MzPABNoXk-APUhtTK9JmpXzygTJpMiV3QbKe-2ehS_PCqu7w24rWgn8u_9zh3HMcTtSmrGYC1OoWJqSeuCsyDh9Ov9Lj2fXAFY2384i4"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-surface-variant border-2 border-white rounded-full"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Julia Ross</h4>
+<p class="text-xs text-on-surface-variant">Motion Designer</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="px-3 py-1 bg-surface-container-highest text-on-surface text-[10px] font-black rounded-full uppercase tracking-widest">Viewer</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer group-hover:text-on-surface">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Permissions Matrix / Insights -->
+<div class="col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-primary/5 rounded-[24px] p-8 border border-primary/10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">shield_person</span>
+</div>
+<div>
+<h3 class="text-lg font-black font-headline">Team Permissions</h3>
+<p class="text-xs text-on-surface-variant">4 Active Role Tiers</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-4 bg-white rounded-xl shadow-sm">
+<p class="text-xs font-bold text-primary uppercase mb-1">Ownership</p>
+<p class="text-lg font-black font-headline">2 Users</p>
+</div>
+<div class="p-4 bg-white rounded-xl shadow-sm">
+<p class="text-xs font-bold text-secondary uppercase mb-1">Administrative</p>
+<p class="text-lg font-black font-headline">5 Users</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-[24px] overflow-hidden relative group">
+<img alt="Team banner" class="w-full h-full object-cover" data-alt="abstract gradient geometric shapes flowing lavender and deep violet glassy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEWfDO_xfyk-zkU3Wln9_Xy-gJwcUPZllyZRN6ihvHkdxBy-r_8Gs5omeDp1WpQcJk8NhDEvNaNQz720IqKEHKSvunYRz7_eQK6DhPufWiGyRTUdkFaee7G34Y5gR4iW985xh5UnRxu7v0idpChIU5XgP2ES7zLMfGWTngzi1rxUI6MTPW32WvQ8jL0sqJvZD7raZaPxeL75CQfCH7iMmNlrTskD3bPq4WGqVVw9Vb8VEe9--sTnwo5bJNjLhR4XcCH647OWg4S8VK"/>
+<div class="absolute inset-0 bg-black/40 backdrop-blur-sm flex flex-col justify-center p-8 text-white">
+<h3 class="text-2xl font-black font-headline leading-tight">Empower your team's<br/>creative flow.</h3>
+<p class="mt-4 text-white/80 text-sm max-w-xs">New collaborative features are available for your current workspace tier.</p>
+<button class="mt-6 w-fit px-6 py-2 bg-white text-on-surface font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Explore Features</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-16 pt-12 border-t border-outline-variant/15 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div>
+<span class="text-sm font-bold text-slate-900">Volo</span>
+<p class="text-xs text-slate-400 mt-2 font-['Inter']">© 2024 Volo Design. Built for the agile curator.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs text-slate-500 font-['Inter'] hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">Privacy</a>
+<a class="text-xs text-slate-500 font-['Inter'] hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">Terms</a>
+<a class="text-xs text-slate-500 font-['Inter'] hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">API</a>
+<a class="text-xs text-slate-500 font-['Inter'] hover:text-[#6a1cf6] transition-opacity underline-offset-4 hover:underline" href="#">Status</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

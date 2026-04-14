@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
 type Shape = {
   id: string;
@@ -25,8 +25,8 @@ export const useCanvasStore = create<State>((set) => ({
   shapes: [],
   addShape: (s: Partial<Shape>) => {
     // generate a robust, reasonably unique id
-    const id = (typeof crypto !== 'undefined' && 'randomUUID' in (crypto as any))
-      ? (crypto as any).randomUUID()
+    const id = (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function')
+      ? crypto.randomUUID()
       : `shape_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
 
     const newShape: Shape = {
@@ -53,5 +53,5 @@ export const useCanvasStore = create<State>((set) => ({
     }));
   },
   zoom: 1,
-  setZoom: (z: number) => set((state: State) => ({ zoom: z })),
+  setZoom: (z: number) => set(() => ({ zoom: z })),
 }));

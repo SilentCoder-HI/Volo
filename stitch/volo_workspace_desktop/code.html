@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volo - Design Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#e6e8ea",
+                    "surface-variant": "#dadddf",
+                    "surface-bright": "#f5f6f7",
+                    "on-tertiary-fixed-variant": "#70103b",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary-fixed-variant": "#67389d",
+                    "primary-dim": "#5d00e3",
+                    "secondary": "#7343a9",
+                    "secondary-fixed-dim": "#d8b5ff",
+                    "secondary-container": "#e3c6ff",
+                    "tertiary": "#9d365d",
+                    "on-primary-container": "#2a0070",
+                    "inverse-on-surface": "#9b9d9e",
+                    "on-primary": "#f7f0ff",
+                    "surface-dim": "#d1d5d7",
+                    "surface-container-low": "#eff1f2",
+                    "on-error-container": "#510017",
+                    "primary": "#6a1cf6",
+                    "on-secondary-fixed": "#49147f",
+                    "on-surface": "#2c2f30",
+                    "error": "#b41340",
+                    "on-tertiary-container": "#640332",
+                    "tertiary-fixed-dim": "#f57ca5",
+                    "inverse-primary": "#9d79ff",
+                    "error-dim": "#a70138",
+                    "secondary-fixed": "#e3c6ff",
+                    "tertiary-fixed": "#ff8db2",
+                    "primary-container": "#ac8eff",
+                    "on-surface-variant": "#595c5d",
+                    "primary-fixed": "#ac8eff",
+                    "outline-variant": "#abadae",
+                    "on-secondary": "#faefff",
+                    "on-secondary-container": "#5e2d93",
+                    "on-background": "#2c2f30",
+                    "tertiary-dim": "#8d2951",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-dim": "#66369c",
+                    "outline": "#757778",
+                    "background": "#f5f6f7",
+                    "on-primary-fixed-variant": "#350088",
+                    "error-container": "#f74b6d",
+                    "primary-fixed-dim": "#a07dff",
+                    "surface": "#f5f6f7",
+                    "on-tertiary-fixed": "#380019",
+                    "surface-tint": "#6a1cf6",
+                    "inverse-surface": "#0c0f10",
+                    "surface-container-highest": "#dadddf",
+                    "surface-container-high": "#e0e3e4",
+                    "tertiary-container": "#ff8db2",
+                    "on-tertiary": "#ffeff1",
+                    "on-error": "#ffefef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f5f6f7; }
+        .canvas-grid {
+            background-image: radial-gradient(#abadae 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="text-on-surface overflow-hidden h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-8 h-16 w-full bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.04)] tonal-shift bg-slate-50/50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#6a1cf6] tracking-tighter font-['Manrope']">Volo</span>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<span class="font-headline font-bold tracking-tight text-on-surface">Agile_Curator_Dashboard.v2</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#6a1cf6] border-b-2 border-[#6a1cf6] pb-1 font-headline font-bold tracking-tight" href="#">Projects</a>
+<a class="text-slate-600 font-medium font-headline font-bold tracking-tight hover:text-[#6a1cf6] transition-colors duration-200" href="#">Community</a>
+<a class="text-slate-600 font-medium font-headline font-bold tracking-tight hover:text-[#6a1cf6] transition-colors duration-200" href="#">Team</a>
+<a class="text-slate-600 font-medium font-headline font-bold tracking-tight hover:text-[#6a1cf6] transition-colors duration-200" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-bold font-headline transition-transform active:scale-95 duration-150">Create New</button>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-[#6a1cf6] transition-colors"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="p-2 text-on-surface-variant hover:text-[#6a1cf6] transition-colors"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+</div>
+<div class="h-8 w-8 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional designer in a bright minimalist studio with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHYQzcYOcfYbff2_8pXPURTCXKYDVVGF-2dgNhjjeP5z0vWXbqSvjU_wvzfJIXghYQPRMsM9fwKUM5wyPmYnvzDT_IafLguykya1c8FR1r_Kc21rW5lfWLj2fpdXQpAKXm-Vjx_41RmpyUEdz4sVP4Kj3969oA6vfQD6RNHIbZlUvrnVH7EY8Q4f-vmG3eaiGji9nsby_70x2zPVjUGWsOIVy7FMCIUDq_VA3ER5HTXGJ4gZEOcapD8mvh6w--2zRWXDzh8LNGG0Vv"/>
+</div>
+</div>
+</header>
+<main class="flex flex-1 pt-16 h-full overflow-hidden">
+<!-- SideNavBar (Left Bento Sidebar) -->
+<aside class="flex flex-col p-4 gap-4 bg-[#eff1f2] rounded-2xl m-4 h-[calc(100vh-80px)] w-64 flat no shadows">
+<div class="flex flex-col gap-1 p-2">
+<span class="text-xs font-bold text-on-surface-variant tracking-widest uppercase">Layers</span>
+</div>
+<div class="flex-1 space-y-2 overflow-y-auto">
+<div class="flex items-center gap-3 p-3 bg-white text-[#6a1cf6] shadow-sm rounded-xl font-['Inter'] text-sm font-semibold active:translate-x-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="grid_view">grid_view</span>
+<span>Workspace</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-slate-500 hover:bg-white/50 rounded-xl font-['Inter'] text-sm font-semibold active:translate-x-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="folder">folder</span>
+<span>Projects</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-slate-500 hover:bg-white/50 rounded-xl font-['Inter'] text-sm font-semibold active:translate-x-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+<span>Community</span>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/15">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 p-2 hover:bg-white/40 rounded-lg transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">visibility</span>
+<span class="text-xs font-medium">Hero_Section</span>
+</div>
+<div class="flex items-center gap-2 p-2 hover:bg-white/40 rounded-lg transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">image</span>
+<span class="text-xs font-medium">Product_Display</span>
+</div>
+<div class="flex items-center gap-2 p-2 hover:bg-white/40 rounded-lg transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">text_fields</span>
+<span class="text-xs font-medium">Headline_Alpha</span>
+</div>
+<div class="ml-4 flex items-center gap-2 p-2 hover:bg-white/40 rounded-lg transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">subdirectory_arrow_right</span>
+<span class="text-xs font-medium text-slate-400">Span_Sub</span>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-auto w-full py-3 bg-primary/10 text-primary rounded-xl font-bold text-xs hover:bg-primary/20 transition-all uppercase tracking-wider">Upgrade Plan</button>
+</aside>
+<!-- Central Canvas -->
+<section class="flex-1 relative flex flex-col items-center justify-center bg-surface overflow-hidden">
+<div class="absolute inset-0 canvas-grid opacity-40"></div>
+<!-- Design Content (The Canvas Canvas) -->
+<div class="relative w-[80%] h-[80%] bg-surface-container-lowest shadow-2xl rounded-sm flex flex-col overflow-hidden">
+<div class="w-full h-48 bg-primary overflow-hidden relative">
+<img alt="Canvas hero" class="w-full h-full object-cover" data-alt="minimalist abstract geometric pattern with shades of violet and fluid organic shapes, clean digital art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgt6EX_XED_Bo00Jnc2jSJLgSgDQKe-gvlZpf47ghYsbLkGNv2YKNf-FzgORZBZ_IO3ZsoBy_KvxdCpPXFjlJ-viz4cKtIWpZi2omQlo6-TVJGn80C9K1eueVL_jZKFG6mpuS8u8LPFcCIp0O_QcWDSBjckQNrFMs-OG-VxiC4EdVMTpNczWMEN9m5n_ZbEtBAG-01x_zzs1_LmjEMN4SaDPA81NxqlkSxhZ6-ery3XOmhFkqF6x-L0GaNvY2KjR7s-s9pbRA4GVEl"/>
+<div class="absolute bottom-4 left-4 text-on-primary">
+<h2 class="text-3xl font-headline font-black tracking-tighter">The Agile Curator</h2>
+</div>
+</div>
+<div class="p-8 flex flex-col gap-6">
+<div class="grid grid-cols-3 gap-4">
+<div class="h-32 rounded-xl bg-surface-container"></div>
+<div class="h-32 rounded-xl bg-surface-container"></div>
+<div class="h-32 rounded-xl bg-surface-container"></div>
+</div>
+<div class="space-y-3">
+<div class="h-4 w-3/4 rounded bg-surface-container"></div>
+<div class="h-4 w-1/2 rounded bg-surface-container"></div>
+</div>
+</div>
+</div>
+<!-- Floating Glassmorphic Toolbar -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-1 p-2 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.1)] border-t border-white/50 z-20">
+<button class="p-3 rounded-xl bg-primary text-on-primary transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</button>
+<div class="w-px h-8 bg-outline-variant/20 mx-1"></div>
+<button class="p-3 rounded-xl hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">rectangle</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">circle</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">draw</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">text_fields</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">image</span>
+</button>
+<div class="w-px h-8 bg-outline-variant/20 mx-1"></div>
+<button class="p-3 rounded-xl hover:bg-surface-container text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">pan_tool</span>
+</button>
+</div>
+</section>
+<!-- Right SideBar (Properties) -->
+<aside class="w-72 bg-surface-container-low h-full flex flex-col p-6 gap-8 overflow-y-auto">
+<!-- Properties Section -->
+<div class="space-y-6">
+<div>
+<h3 class="text-xs font-bold text-on-surface-variant tracking-widest uppercase mb-4">Alignment</h3>
+<div class="grid grid-cols-6 gap-1 bg-surface-container rounded-lg p-1">
+<button class="p-1.5 hover:bg-white rounded transition-all"><span class="material-symbols-outlined text-lg">align_horizontal_left</span></button>
+<button class="p-1.5 hover:bg-white rounded transition-all"><span class="material-symbols-outlined text-lg">align_horizontal_center</span></button>
+<button class="p-1.5 hover:bg-white rounded transition-all"><span class="material-symbols-outlined text-lg">align_horizontal_right</span></button>
+<button class="p-1.5 hover:bg-white rounded transition-all"><span class="material-symbols-outlined text-lg">align_vertical_top</span></button>
+<button class="p-1.5 hover:bg-white rounded transition-all"><span class="material-symbols-outlined text-lg">align_vertical_center</span></button>
+<button class="p-1.5 hover:bg-white rounded transition-all"><span class="material-symbols-outlined text-lg">align_vertical_bottom</span></button>
+</div>
+</div>
+<div>
+<h3 class="text-xs font-bold text-on-surface-variant tracking-widest uppercase mb-4">Geometry</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase ml-1">Width</label>
+<input class="w-full bg-white border-none rounded-lg py-2 px-3 text-sm focus:ring-2 focus:ring-primary/20" type="text" value="1280"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase ml-1">Height</label>
+<input class="w-full bg-white border-none rounded-lg py-2 px-3 text-sm focus:ring-2 focus:ring-primary/20" type="text" value="720"/>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xs font-bold text-on-surface-variant tracking-widest uppercase mb-4">Styling</h3>
+<div class="space-y-4">
+<!-- Fill -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary shadow-sm border border-white"></div>
+<span class="text-sm font-semibold">Fill Color</span>
+</div>
+<span class="text-xs font-mono text-slate-500">#6A1CF6</span>
+</div>
+<!-- Stroke -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg border-2 border-slate-300 bg-transparent"></div>
+<span class="text-sm font-semibold">Stroke</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono text-slate-500">2px</span>
+<span class="material-symbols-outlined text-sm">visibility</span>
+</div>
+</div>
+<!-- Effects -->
+<div class="pt-4 border-t border-outline-variant/15">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-semibold">Effects</span>
+<button class="p-1 hover:bg-surface-container rounded-md"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+<div class="bg-white/40 p-3 rounded-xl flex items-center justify-between text-xs font-medium">
+<span>Drop Shadow</span>
+<span class="material-symbols-outlined text-sm">settings</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Export -->
+<div class="mt-auto">
+<button class="w-full py-3 bg-surface-container-highest text-on-surface font-bold text-sm rounded-xl hover:bg-surface-variant transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+                    Export Asset
+                </button>
+</div>
+</aside>
+</main>
+<!-- Footer Suppression Logic: Hidden as it's a task-focused task-focused workspace -->
+<footer class="hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 full-width py-12 px-8 bg-[#f5f6f7] border-t border-[#outline-variant]/15 font-['Inter'] text-xs text-slate-400">
+<span>© 2024 Volo Design. Built for the agile curator.</span>
+</div>
+</footer>
+</body></html>

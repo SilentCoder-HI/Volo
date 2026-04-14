@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#e6e8ea",
+                    "surface-variant": "#dadddf",
+                    "surface-bright": "#f5f6f7",
+                    "on-tertiary-fixed-variant": "#70103b",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary-fixed-variant": "#67389d",
+                    "primary-dim": "#5d00e3",
+                    "secondary": "#7343a9",
+                    "secondary-fixed-dim": "#d8b5ff",
+                    "secondary-container": "#e3c6ff",
+                    "tertiary": "#9d365d",
+                    "on-primary-container": "#2a0070",
+                    "inverse-on-surface": "#9b9d9e",
+                    "on-primary": "#f7f0ff",
+                    "surface-dim": "#d1d5d7",
+                    "surface-container-low": "#eff1f2",
+                    "on-error-container": "#510017",
+                    "primary": "#6a1cf6",
+                    "on-secondary-fixed": "#49147f",
+                    "on-surface": "#2c2f30",
+                    "error": "#b41340",
+                    "on-tertiary-container": "#640332",
+                    "tertiary-fixed-dim": "#f57ca5",
+                    "inverse-primary": "#9d79ff",
+                    "error-dim": "#a70138",
+                    "secondary-fixed": "#e3c6ff",
+                    "tertiary-fixed": "#ff8db2",
+                    "primary-container": "#ac8eff",
+                    "on-surface-variant": "#595c5d",
+                    "primary-fixed": "#ac8eff",
+                    "outline-variant": "#abadae",
+                    "on-secondary": "#faefff",
+                    "on-secondary-container": "#5e2d93",
+                    "on-background": "#2c2f30",
+                    "tertiary-dim": "#8d2951",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-dim": "#66369c",
+                    "outline": "#757778",
+                    "background": "#f5f6f7",
+                    "on-primary-fixed-variant": "#350088",
+                    "error-container": "#f74b6d",
+                    "primary-fixed-dim": "#a07dff",
+                    "surface": "#f5f6f7",
+                    "on-tertiary-fixed": "#380019",
+                    "surface-tint": "#6a1cf6",
+                    "inverse-surface": "#0c0f10",
+                    "surface-container-highest": "#dadddf",
+                    "surface-container-high": "#e0e3e4",
+                    "tertiary-container": "#ff8db2",
+                    "on-tertiary": "#ffeff1",
+                    "on-error": "#ffefef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.04)] tonal-shift bg-slate-50/50 h-16">
+<div class="flex items-center justify-between px-8 h-full w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#6a1cf6] tracking-tighter font-headline">Volo</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 font-medium hover:text-[#6a1cf6] transition-colors duration-200 font-['Manrope']" href="#">Projects</a>
+<a class="text-[#6a1cf6] border-b-2 border-[#6a1cf6] pb-1 font-bold tracking-tight font-['Manrope']" href="#">Community</a>
+<a class="text-slate-600 font-medium hover:text-[#6a1cf6] transition-colors duration-200 font-['Manrope']" href="#">Team</a>
+<a class="text-slate-600 font-medium hover:text-[#6a1cf6] transition-colors duration-200 font-['Manrope']" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full gap-2">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Search community..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-600 hover:text-[#6a1cf6] transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-2 text-slate-600 hover:text-[#6a1cf6] transition-colors"><span class="material-symbols-outlined">settings</span></button>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-bold text-sm scale-95 duration-150 active:scale-90">Create New</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border-2 border-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgVB3RYH3XCviGrh3Xt6JSzzb4TbOeyBAB-l0PQDSZJd0Vjvm0WdaT7-6MPPZNkibeuevrKyVmbXU5KpVHsTqWuRfEixNGhrX5hDnOUL59F8Id4THcJTrI_5YeErqdGGDBLSefml85X6UJEQZg37bFK6LgTwLXfcwgSye5vdjihy3WxhiFlyxmoDwF7mo7MI1geGyH_GMrphGBSMETmLD9Hpa40LoWukLOat_iIWm9tk7meE4o-YyLIuo6BDGjy4jIVrQ9l4QKtcYg"/>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col p-4 gap-2 rounded-2xl m-4 h-[calc(100vh-100px)] w-64 bg-[#eff1f2] sticky top-20">
+<div class="flex items-center gap-3 px-3 py-4 mb-2">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<p class="font-['Inter'] text-sm font-semibold text-on-surface">Main Workspace</p>
+<p class="text-xs text-on-surface-variant">Design Team</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 font-semibold text-sm hover:bg-white/60 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">grid_view</span> Workspace
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 font-semibold text-sm hover:bg-white/60 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">folder</span> Projects
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 bg-white text-[#6a1cf6] shadow-sm rounded-xl font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span> Community
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 font-semibold text-sm hover:bg-white/60 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">group</span> Team
+                </a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 font-semibold text-sm hover:bg-white/60 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+                </a>
+</nav>
+<div class="mt-auto p-4 bg-primary-container/20 rounded-2xl">
+<p class="text-xs font-bold text-on-primary-container mb-2">Pro Plan Active</p>
+<button class="w-full py-2 bg-primary text-on-primary rounded-xl text-xs font-bold">Upgrade Plan</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<header class="mb-10">
+<h1 class="text-5xl font-black font-headline text-on-surface tracking-tight mb-4">The Showcase</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl font-body">Discover, curate, and download the world's most agile assets. High-end UI kits, precision icons, and bespoke illustrations.</p>
+</header>
+<!-- Filters Section -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex bg-surface-container-low p-1.5 rounded-full">
+<button class="px-6 py-2 bg-white rounded-full text-sm font-bold text-primary shadow-sm">Trending</button>
+<button class="px-6 py-2 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors">New</button>
+<button class="px-6 py-2 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors">Following</button>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-on-surface-variant">Category:</span>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 bg-surface-container-high rounded-full text-xs font-bold cursor-pointer hover:bg-primary hover:text-white transition-all">UI Kits</span>
+<span class="px-4 py-1.5 bg-surface-container-high rounded-full text-xs font-bold cursor-pointer hover:bg-primary hover:text-white transition-all">Icons</span>
+<span class="px-4 py-1.5 bg-surface-container-high rounded-full text-xs font-bold cursor-pointer hover:bg-primary hover:text-white transition-all">3D</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Showcase -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Large Featured Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-[32px] overflow-hidden group relative">
+<div class="aspect-[16/9] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="vibrant abstract 3d shapes in shades of purple and blue floating in a clean white studio space with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7Ce3YS2Y1iPgzAhMd3X6F0F-Kz4RG4DZPu8KoLWrLEyffnqh9jCVdiMTO8ldgRgnyjnEuCeqKdaA03rBDJuDoGRJlZzTN17QbxlegtT8MVjTsVZdD5Mez2idfbfhtLPhvsQtcxfd_Exk9kY8tECqpzmg7yPaXNWMTsmL_FCYY0UjMbgHDc3DaHcPXzzNyeRaCaLZ0_zp2jB-Fg6prk-9_DY_UgBO8o2ThxdX4eMnxrUNfHKDln2KFBaGgZlkTULgTCcXt0sXuO1B"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+<div class="flex items-center gap-3">
+<img alt="Creator" class="w-10 h-10 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArB0Yr9QoKTnMgeJmXBD6_lxObbHYWEdayw15n3dO9ecIGOSikqvEf-BNLimUOg6jNHs1m2F-7AlK8ETX9rJoqSHXFOUNvZtWaOMKSkEO__WdRPj01blhVPpVR5dcLn15lpeKwy_s1uth4G_tO3WfWaB2VWg-4g-_LXAi_rUae-BxiG4DOP-81MhYlbYy6N1dwXnRi2viUpamfU2JQGl3h2N36QThfvU3HUjpTN44ZS_cLLNgQZRoCx8BJxXI5y5Hkvt5pkTbTDieq"/>
+<div>
+<p class="text-white font-bold text-sm">Alex Rivera</p>
+<p class="text-white/80 text-xs">Curator &amp; Designer</p>
+</div>
+</div>
+<button class="bg-white text-primary p-3 rounded-full shadow-xl"><span class="material-symbols-outlined">download</span></button>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">Premium Resource</span>
+<h3 class="text-2xl font-bold font-headline text-on-surface mb-2">Volo Pro Design System 2.0</h3>
+<p class="text-on-surface-variant font-body">A complete architectural overhaul for high-scale enterprise applications with over 500+ variants.</p>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-bold text-sm">
+<span class="material-symbols-outlined text-sm">favorite</span> 1.2k
+                            </div>
+</div>
+</div>
+</div>
+<!-- Vertical Small Card -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-[32px] overflow-hidden flex flex-col group">
+<div class="aspect-square w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="minimalist collection of geometric 3d icons in matte pastel finishes against a neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJbtWf4b3zQ4my_f4BaUEkrPsOwjv198mXjNAD99oq6qUz4C083Ph7uHCazqzXpWa1wd70Aauo2x9HUm5wfjLC663iI8AJASnIEO_GPU0kSGKa6JeOt6BC6FDHVOmlSkF4WOeRLn9MGbqZWtf2iuUFpiKeyrW20zaflqu7_dfkFqieKovBUaS6okn5QED158lEmD5BgylSwNgyFVEIHI43wAACo6Jr-ZNYbOH0JhD2X4PHzK3TqXuKDsJYtB5yy76aiHUAXAoW-nii"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-tertiary mb-2 block">Icons</span>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-2">Morphism Icons Pack</h3>
+<p class="text-sm text-on-surface-variant font-body mb-6">48 custom glass-styled icons for futuristic interfaces.</p>
+<div class="mt-auto flex justify-between items-center">
+<div class="flex -space-x-2">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACSWCkYHCB_MdJc3Dg8gWyLFMnDCufKTMi1YeTZTivFA3bkJkkoYW022GsKgUGJuR0fxKe166HP8ni67HFelEgechGUGQ83CYLI-LpOIwpwy7T5QhMZCgzZvJ7hW-WLc0k3A7iGOqcHWHiT9YniJoVfw8xTfTSZSRrzzFmxFuJRm1Ilc37tpLaDMtDY0fEVk7rnc68oiXheEGyLLrkH9qxb4kKOKJ-VGL3Y2rBrjX0ED8k-YtkenwFfTIzXoteK-0Ffa4YCqUTz3gS"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMVDOFdl5AtmlXgRg9aNDknwMqc8V0pHk4Cx7l-Bn5tK2Hj_7dlzMJbZZKOFNjg0RCcxkdhVIM1sX2F0vHz3V_3emtcMhMDlqaT1of0uAeYEWpUNoAFcd76zEyq1tP7NDcWZLMS8FEZ-T1zwEeTj4KIofG9SUlVw5F2_zCOdu66tb4h_6wDzifWDE7Pu2bRjIKpS7BS0_G_56RZ2Fty0BarUNSz-q_Qb6Tbm1lSQBVAmUrrLrTwPhHQ7m4aaAY4VR37sCLIrS6cwfC"/>
+<div class="w-8 h-8 rounded-full bg-surface-container border-2 border-surface-container-lowest flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+12</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</div>
+</div>
+</div>
+<!-- Secondary Row -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-[32px] overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="abstract procedural digital art with sharp edges and glowing cyan accents on a dark structured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDznbcyPFDUFGolDcX4wTFklmhSrRDpEqx6rNPxGLLRkxIa6EWOXqYq0ZSZCiOy9ktElrz4IaWfWe3ZDGicrpkbJSEgT1qvnuK9eEGOMriboHiDhgh9zI61kWT1pe29F6W24Fx5AxvGvpAuUofiXIDy3WjmeSiMp2c7ox5nlTOPrRpIaTFZ_kFfB4N4POFWTG0tpjHQCDbLlD9392cZeUIqsHvS6sEUzzgb1ck6HinEkjTBLt6mpTvNBgkQ7MK4fZ1KskJv1ZAZg9g1"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-bold font-headline mb-1">Neo-Abstract Patterns</h3>
+<p class="text-xs text-on-surface-variant">Curated by Volo Lab</p>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-[32px] overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="professional workspace setup with large high-resolution monitor displaying clean minimalist dashboard design in bright light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8LmU39sI6d7EOYFMymnt5aDmNm40Fsco46p-PR8t3KOXvSpoxdrOeQS7x28HDQsKBKJzjKIB1AdcL-jzTe-ViHQ07NqxwnC0ah4zLYpfo_-66eytddpLxCOb4RnW6TmvkUb1UpUBQ1C-aC04XUizCwSsGm0i81IcRHL7Env99N0f6Xri_mFoHhwknFXWP_tRMveQ013H1yZjKMBl82hB5jUBSywWefjjB90K4YhHVhgW8Jo_R8dT2cd12oPkDs0N2BY63LoruLo6S"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-bold font-headline mb-1">Admin Dashboard UI</h3>
+<p class="text-xs text-on-surface-variant">Free for personal use</p>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-[32px] overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="close-up of intricate metallic textures and microchips with blue glowing pathways and cybernetic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0yagAlIH6hKbXPutR7Fw9NxTd4l55GenVUrDlm2-ZYjrmogYwHZQduAajqIsJerAFUTO3w0sTxBex3jGTErFfGdaUcn8nVdf9FzOCX60_0lUey9nEgVpANrR9D82IcRVDaHYl9xiKAmtTfknQDZHBxdp8-TdkGPNPbCsKr6JLEzXrsnYHN3_ZlCPEfIiPV-asGQ-ZsNUVocegSIztm72pO6Gq8wCC4-dWzS2Df7fWMmnUQYF-XuDfbLaksGBMX5r43CaES92EqXgR"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-bold font-headline mb-1">Tech Illustration Set</h3>
+<p class="text-xs text-on-surface-variant">by CyberStudio</p>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="mt-24 py-12 border-t border-outline-variant/15">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-sm font-bold text-slate-900 font-headline">Volo</span>
+<p class="font-['Inter'] text-xs text-slate-400">© 2024 Volo Design. Built for the agile curator.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-[#6a1cf6] transition-opacity text-xs font-medium hover:underline underline-offset-4" href="#">Privacy</a>
+<a class="text-slate-500 hover:text-[#6a1cf6] transition-opacity text-xs font-medium hover:underline underline-offset-4" href="#">Terms</a>
+<a class="text-slate-500 hover:text-[#6a1cf6] transition-opacity text-xs font-medium hover:underline underline-offset-4" href="#">API</a>
+<a class="text-slate-500 hover:text-[#6a1cf6] transition-opacity text-xs font-medium hover:underline underline-offset-4" href="#">Status</a>
+</div>
+<div class="flex gap-4">
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-lg">share</span></button>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-lg">public</span></button>
+</div>
+</div>
+</footer>
+</main>
+</div>
+<!-- Contextual FAB -->
+<div class="fixed bottom-8 right-8 z-40">
+<button class="bg-primary text-white flex items-center gap-2 px-6 py-4 rounded-2xl shadow-2xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">add</span>
+<span class="font-bold font-headline">Upload Asset</span>
+</button>
+</div>
+</body></html>
